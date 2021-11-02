@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DashboardFragment">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:id="@+id/appBar"
+        android:elevation="5dp">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="LifePlus"
+                  android:fontFamily="@font/poppins_semibold"
+                  android:layout_marginStart="10dp"
+                  android:textSize="20sp"
+                  android:textColor="?attr/headLine_text_color"/>
+
+              <com.google.android.material.card.MaterialCardView
+                  android:id="@+id/profileCard"
+                  android:layout_width="45dp"
+                  android:layout_height="45dp"
+                  android:layout_margin="5dp"
+                  app:cardElevation="5dp"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  app:cardCornerRadius="23dp"
+                  android:focusable="true"
+                  android:clickable="true">
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:src="@drawable/user"
+                      android:scaleType="centerCrop"
+                      android:layout_margin="5dp"/>
+              </com.google.android.material.card.MaterialCardView>
+
+          </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edit_text_style"
+        android:drawableEnd="@drawable/ic_search_2_line"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/poppins"
+        android:hint="Search..."
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:minHeight="40dp"
+        android:padding="5dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search"
+        android:id="@+id/nestedScrollView">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dashRV"/>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

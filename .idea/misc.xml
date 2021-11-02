@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/edit_text_style.xml" value="0.37592592592592594" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/ic_calendar_line.xml" value="0.37592592592592594" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/ic_edit_line.xml" value="0.37592592592592594" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/ic_smartphone_line.xml" value="0.37592592592592594" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/ic_user_3_line.xml" value="0.22083333333333333" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/ic_user_4_line.xml" value="0.37592592592592594" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/activity_auth.xml" value="0.35280797101449274" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/activity_home.xml" value="0.35104166666666664" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/activity_main.xml" value="0.35280797101449274" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/fragment_dashboard.xml" value="0.35280797101449274" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/fragment_details.xml" value="0.2046875" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/fragment_login.xml" value="0.27034120734908135" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/fragment_registration.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
