@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifePlus">
         <activity
-            android:name=".HomeActivity"
+            android:name=".acivity.HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".AuthActivity"
+            android:name=".acivity.AuthActivity"
             android:exported="true" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".acivity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.lifeplus;
+package com.example.lifeplus.acivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 
+import com.example.lifeplus.R;
 import com.example.lifeplus.databinding.ActivitySplashBinding;
 
 public class SplashActivity extends AppCompatActivity {

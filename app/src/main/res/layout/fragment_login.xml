@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".fragments.LoginFragment">
 
 
     <ScrollView
@@ -55,7 +55,7 @@
                 android:background="@drawable/edit_text_style"
                 android:elevation="5dp"
                 android:fontFamily="@font/poppins_light"
-                android:hint="Email"
+                android:hint="Username"
                 android:inputType="textEmailAddress"
                 android:padding="10dp" />
             <com.google.android.material.textfield.TextInputEditText

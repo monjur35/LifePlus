@@ -1,17 +1,16 @@
-package com.example.lifeplus;
+package com.example.lifeplus.acivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class AuthActivity extends AppCompatActivity {
+import com.example.lifeplus.R;
+
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_auth);
-
-
-
+        setContentView(R.layout.activity_home);
     }
 }
