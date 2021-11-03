@@ -19,7 +19,7 @@
         <item name="title_text_color">#CD000000</item>
         <item name="headLine_text_color">@color/blue</item>
         <item name="card_color">#FFFFFF</item>
-        <item name="view_color">#f1f1f1</item>
+        <item name="view_color">#FFFFFF</item>
 
     </style>
 </resources>

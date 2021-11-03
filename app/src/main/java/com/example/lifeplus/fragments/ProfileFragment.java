@@ -1,5 +1,6 @@
 package com.example.lifeplus.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -7,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.lifeplus.R;
+import com.example.lifeplus.acivity.AuthActivity;
 import com.example.lifeplus.databinding.FragmentProfileBinding;
 import com.example.lifeplus.models.UserModel;
 import com.example.lifeplus.utils.StoreDataPreference;
@@ -67,6 +70,23 @@ public class ProfileFragment extends Fragment {
                         }
                     }
                 });
+            }
+        });
+
+        binding.logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                storeDataPreference.setLoginStatus(false);
+                Intent logoutIntent=new Intent(requireActivity(), AuthActivity.class);
+                startActivity(logoutIntent);
+                requireActivity().finish();
+            }
+        });
+
+        binding.gobackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_profileFragment_to_dashboardFragment);
             }
         });
 

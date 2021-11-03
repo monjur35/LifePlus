@@ -32,6 +32,31 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="0.5dp"
+                android:elevation="5dp">
+                <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Log out"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
         </RelativeLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -72,7 +97,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Monjur "
+                android:text="null "
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="?attr/title_text_color"
                 android:textSize="22sp" />
@@ -115,7 +140,7 @@
                     android:padding="10dp"
                     android:text="Edit"
                     android:textColor="#D32F2F"
-                    android:textSize="22sp" />
+                    android:textSize="18sp" />
             </RelativeLayout>
 
             <LinearLayout
@@ -155,7 +180,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="Monjur E Mowla"
+                            android:text="null"
                             android:textColor="?attr/text_color"
                             android:textSize="18sp" />
 
@@ -193,7 +218,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="monjur65"
+                            android:text="null"
                             android:id="@+id/userName"
                             android:textColor="?attr/text_color"
                             android:textSize="18sp" />
@@ -234,7 +259,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="01xxxxxxxxx"
+                            android:text="null"
                             android:textColor="?attr/text_color"
                             android:textSize="18sp" />
 
@@ -287,11 +312,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="5dp"
                     android:layout_marginTop="20dp"
-                    android:background="?attr/view_color" />
+                   />
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/loginBtn"
+                android:id="@+id/gobackBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_below="@+id/personalLayout"

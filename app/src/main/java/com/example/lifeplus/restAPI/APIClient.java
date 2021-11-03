@@ -1,4 +1,4 @@
-package com.moinul.digitaluno.restApi;
+package com.example.lifeplus.restAPI;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class APIClient {
     private static final String TAG = "ApiClient:";
-    private static final String BASE_URL = "http://digitaluno.amaderrel.com/public/api/";
+    private static final String BASE_URL = "https://api.tvmaze.com/";
     private static Retrofit retrofit = null;
     private static Retrofit rxRetrofit = null;
     private static ApiInterface apiInterface = null;

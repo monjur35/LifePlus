@@ -1,11 +1,10 @@
 
-package com.example.lifeplus;
+package com.example.lifeplus.reponse.shows;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-@Generated("jsonschema2pojo")
+
 public class Network {
 
     @SerializedName("id")

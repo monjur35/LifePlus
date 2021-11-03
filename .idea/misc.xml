@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/edit_text_style.xml" value="0.37592592592592594" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/gradient.xml" value="0.38645833333333335" />
         <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/ic_calendar_line.xml" value="0.37592592592592594" />
         <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/ic_edit_line.xml" value="0.37592592592592594" />
         <entry key="..\:/Android projects/LifePlus/app/src/main/res/drawable/ic_smartphone_line.xml" value="0.37592592592592594" />
@@ -17,6 +18,7 @@
         <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/fragment_login.xml" value="0.27034120734908135" />
         <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/fragment_registration.xml" value="0.33" />
+        <entry key="..\:/Android projects/LifePlus/app/src/main/res/layout/show_row.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -19,7 +19,7 @@ public class RoomRepo {
 
 
             userDao.registerUserss(userModel);
-            Log.e("TAG", "registerUser: "+userModel.getName());
+           // Log.e("TAG", "registerUser: "+userModel.getName());
 
     }
 

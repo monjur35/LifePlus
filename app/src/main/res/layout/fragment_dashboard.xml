@@ -49,6 +49,7 @@
           </RelativeLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/search"
         android:layout_width="match_parent"
@@ -64,20 +65,38 @@
         android:elevation="10dp"
         android:fontFamily="@font/poppins"
         android:hint="Search..."
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
         android:minHeight="40dp"
-        android:padding="5dp" />
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp" />
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/search"
-        android:id="@+id/nestedScrollView">
-        <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/search">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/dashRV"/>
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dashRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.FadingCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dashRV"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:SpinKit_Color="#DC00796B" />
+        </RelativeLayout>
+
     </androidx.core.widget.NestedScrollView>
 
     <TextView
