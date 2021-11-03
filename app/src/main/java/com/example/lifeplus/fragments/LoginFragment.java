@@ -21,6 +21,7 @@ import com.example.lifeplus.R;
 import com.example.lifeplus.acivity.HomeActivity;
 import com.example.lifeplus.databinding.FragmentLoginBinding;
 import com.example.lifeplus.models.UserModel;
+import com.example.lifeplus.utils.StoreDataPreference;
 import com.example.lifeplus.viewmodel.AuthViewModel;
 
 
@@ -28,6 +29,7 @@ public class LoginFragment extends Fragment {
 
     private FragmentLoginBinding binding;
     private AuthViewModel authViewModel;
+    private StoreDataPreference storeDataPreference;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -42,6 +44,7 @@ public class LoginFragment extends Fragment {
 
         binding= FragmentLoginBinding.inflate(inflater);
         authViewModel=new ViewModelProvider(requireActivity()).get(AuthViewModel.class);
+        storeDataPreference=StoreDataPreference.getInstance(requireContext());
         return binding.getRoot();
     }
 
@@ -49,7 +52,14 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        if (storeDataPreference.getLogInStatus()){
+            homeInten();
+        }
+
+
         Handler handler=new Handler(Looper.getMainLooper());
+
+
         binding.loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,9 +83,7 @@ public class LoginFragment extends Fragment {
                                         Toast.makeText(requireContext(), "Invalid credentials", Toast.LENGTH_SHORT).show();
                                     }
                                     else {
-                                        Intent home=new Intent(getActivity(), HomeActivity.class);
-                                        startActivity(home);
-                                        getActivity().finish();
+                                       homeIntent();
                                     }
                                 }
                             });
@@ -83,10 +91,6 @@ public class LoginFragment extends Fragment {
                     });
 
                 }
-
-
-
-                //
             }
         });
 
@@ -96,5 +100,11 @@ public class LoginFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registrationFragment);
             }
         });
+    }
+
+    private void homeIntent() {
+        Intent home=new Intent(getActivity(), HomeActivity.class);
+        startActivity(home);
+        getActivity().finish();
     }
 }

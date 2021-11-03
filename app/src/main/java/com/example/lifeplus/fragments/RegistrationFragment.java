@@ -18,10 +18,12 @@ import android.widget.Toast;
 import com.example.lifeplus.acivity.HomeActivity;
 import com.example.lifeplus.databinding.FragmentRegistrationBinding;
 import com.example.lifeplus.models.UserModel;
+import com.example.lifeplus.utils.StoreDataPreference;
 import com.example.lifeplus.viewmodel.AuthViewModel;
 
 
 public class RegistrationFragment extends Fragment {
+    private StoreDataPreference storeDataPreference;
 
     private FragmentRegistrationBinding binding;
     private AuthViewModel authViewModel;
@@ -39,6 +41,7 @@ public class RegistrationFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding= FragmentRegistrationBinding.inflate(inflater);
         authViewModel=new ViewModelProvider(requireActivity()).get(AuthViewModel.class);
+        storeDataPreference=StoreDataPreference.getInstance(requireContext());
         return binding.getRoot();
     }
 
@@ -65,18 +68,24 @@ public class RegistrationFragment extends Fragment {
                         @Override
                         public void run() {
                             UserModel userModel=new UserModel(userName,name,phone,pass);
-                            authViewModel.registerUser(userModel);
-                            Toast.makeText(requireContext(), "User registered successfully", Toast.LENGTH_SHORT).show();
-                            Intent home=new Intent(getActivity(), HomeActivity.class);
-                            startActivity(home);
+                            saveData(userModel);
                         }
                     });
 
                 }
 
-
-                //getActivity().finish();
             }
         });
     }
+
+    private void saveData(UserModel userModel) {
+        authViewModel.registerUser(userModel);
+        storeDataPreference.setUserName(userModel.getUsername());
+        storeDataPreference.setLoginStatus(true);
+        Toast.makeText(requireContext(), "User registered successfully", Toast.LENGTH_SHORT).show();
+        Intent home=new Intent(getActivity(), HomeActivity.class);
+        startActivity(home);
+        getActivity().finish();
+    }
+
 }
