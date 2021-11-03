@@ -26,4 +26,8 @@ public class RoomRepo {
     public LiveData<UserModel>logIn(String userName,String password){
         return userDao.login(userName,password);
     }
+
+    public LiveData<UserModel> getUserData(String userName){
+        return userDao.getUserData(userName);
+    }
 }

@@ -53,7 +53,7 @@ public class LoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         if (storeDataPreference.getLogInStatus()){
-            homeInten();
+            homeIntent();
         }
 
 
@@ -83,6 +83,8 @@ public class LoginFragment extends Fragment {
                                         Toast.makeText(requireContext(), "Invalid credentials", Toast.LENGTH_SHORT).show();
                                     }
                                     else {
+                                        storeDataPreference.setUserName(userModel.getUsername());
+                                        storeDataPreference.setLoginStatus(true);
                                        homeIntent();
                                     }
                                 }

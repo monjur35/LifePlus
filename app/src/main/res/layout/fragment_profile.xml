@@ -151,6 +151,7 @@
                             android:textSize="18sp" />
 
                         <TextView
+                            android:id="@+id/name2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
@@ -193,6 +194,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
                             android:text="monjur65"
+                            android:id="@+id/userName"
                             android:textColor="?attr/text_color"
                             android:textSize="18sp" />
 

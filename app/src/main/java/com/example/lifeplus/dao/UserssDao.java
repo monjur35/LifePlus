@@ -22,9 +22,8 @@ public interface UserssDao {
     LiveData<UserModel> login(String userName,String pass);
 
 
-
-
-
+    @Query("select * from user_table where username =:username")
+    LiveData<UserModel> getUserData(String username);
 
     @Update
     int updateUserss(UserModel userModel);
@@ -37,8 +36,6 @@ public interface UserssDao {
 
     @Query("select * from user_table")
     LiveData<List<UserModel>> getAllUserss();
-
-
 
 
 }

@@ -10,22 +10,20 @@ import com.example.lifeplus.models.UserModel;
 import com.example.lifeplus.repository.RoomRepo;
 import com.example.lifeplus.room.AppDatabase;
 
-public class AuthViewModel extends AndroidViewModel {
+public class ProfileViewModel extends AndroidViewModel  {
+
     private RoomRepo roomRepo;
     private AppDatabase db;
 
-    public AuthViewModel(@NonNull Application application) {
+    public ProfileViewModel(@NonNull Application application) {
         super(application);
+
         db=AppDatabase.getDatabase(application);
         roomRepo=new RoomRepo(db.userDao());
     }
 
-    public void registerUser(UserModel userModel){
-        roomRepo.registerUser(userModel);
-    }
-
-    public LiveData<UserModel> login(String userName,String pass){
-        return roomRepo.logIn(userName,pass);
+    public LiveData<UserModel> getUserData(String userName){
+        return roomRepo.getUserData(userName);
     }
 
 
