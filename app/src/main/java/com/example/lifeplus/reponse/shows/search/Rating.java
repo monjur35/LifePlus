@@ -1,5 +1,5 @@
 
-package com.example.lifeplus.reponse.shows;
+package com.example.lifeplus.reponse.shows.search;
 
 
 import com.google.gson.annotations.Expose;
@@ -10,13 +10,13 @@ public class Rating {
 
     @SerializedName("average")
     @Expose
-    private Double average;
+    private Object average;
 
-    public Double getAverage() {
+    public Object getAverage() {
         return average;
     }
 
-    public void setAverage(Double average) {
+    public void setAverage(Object average) {
         this.average = average;
     }
 

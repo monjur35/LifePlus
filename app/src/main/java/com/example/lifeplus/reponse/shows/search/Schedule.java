@@ -1,10 +1,10 @@
 
-package com.example.lifeplus.reponse.shows;
+package com.example.lifeplus.reponse.shows.search;
 
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
 
 public class Schedule {
 

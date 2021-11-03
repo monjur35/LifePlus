@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="false"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.DashboardFragment">
     <com.google.android.material.appbar.AppBarLayout
@@ -50,35 +51,43 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/search"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/searchLayout"
         android:layout_below="@+id/appBar"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/edit_text_style"
-        android:drawableEnd="@drawable/ic_search_2_line"
-        android:drawablePadding="10dp"
-        android:elevation="10dp"
-        android:fontFamily="@font/poppins"
-        android:hint="Search..."
-        android:minHeight="40dp"
-        android:padding="5dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp" />
-
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/search">
-
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchBox"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_style"
+            android:drawableEnd="@drawable/ic_search_2_line"
+            android:drawablePadding="10dp"
+            android:elevation="10dp"
+            android:fontFamily="@font/poppins"
+            android:hint="Search movies"
+            android:minHeight="40dp"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/searchBtn"/>
+    </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchLayout">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/dashRV"
@@ -93,11 +102,11 @@
                 android:layout_below="@+id/dashRV"
                 android:layout_centerInParent="true"
                 android:padding="10dp"
-                android:visibility="visible"
+                android:visibility="invisible"
                 app:SpinKit_Color="#DC00796B" />
         </RelativeLayout>
 
-    </androidx.core.widget.NestedScrollView>
+
 
     <TextView
         android:layout_width="wrap_content"

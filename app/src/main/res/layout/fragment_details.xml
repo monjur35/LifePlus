@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.DetailsFragment">
 
@@ -26,12 +27,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="600dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/unsplash" />
+                    tools:src="@drawable/unsplash" />
 
                 <ImageView
                     android:id="@+id/gd"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="100dp"
                     android:layout_alignParentBottom="true"
                     android:src="@drawable/gradient" />
             </RelativeLayout>
@@ -53,8 +54,8 @@
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Under the dome"
-                    android:textColor="@color/black"
+                    tools:text="Under the dome"
+                    android:textColor="@color/orange"
                     android:textSize="20sp" />
 
                 <TextView
@@ -65,7 +66,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@+id/movieNameinRow"
                     android:fontFamily="@font/poppins"
-                    android:text="(2021)"
+                    tools:text="(2021)"
                     android:textColor="?attr/text_color"
                     android:textSize="15sp" />
             </RelativeLayout>
@@ -77,7 +78,7 @@
                 android:layout_below="@+id/namelayout"
                 android:layout_marginHorizontal="10dp"
                 android:fontFamily="@font/poppins"
-                android:text="Imdb :7/10"
+                tools:text="Imdb :7/10"
                 android:textColor="?attr/text_color"
                 android:textSize="15sp" />
 
@@ -100,9 +101,9 @@
                 android:layout_below="@+id/rating"
                 android:layout_marginHorizontal="10dp"
                 android:fontFamily="@font/poppins"
-                android:text="Genres: Thriller"
                 android:textColor="?attr/text_color"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                tools:text="Genres: Thriller" />
 
             <TextView
                 android:id="@+id/country"
@@ -112,16 +113,62 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/poppins"
-                android:text="US"
                 android:textColor="?attr/text_color"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                tools:text="US" />
+
+            <View
+                android:id="@+id/empView1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/country"
+                android:layout_marginTop="10dp"
+                android:background="?attr/view_color" />
+
+            <TextView
+                android:id="@+id/schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/empView1"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Schedule"
+                android:textColor="?attr/text_color"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/schedule"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="?attr/text_color"
+                android:textSize="15sp"
+                tools:text="12.00" />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/schedule"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/time"
+                android:fontFamily="@font/poppins"
+                android:textColor="?attr/text_color"
+                android:textSize="15sp"
+                tools:text="Today" />
 
 
             <View
                 android:id="@+id/empView"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:layout_below="@+id/country"
+                android:layout_below="@+id/time"
                 android:layout_marginTop="10dp"
                 android:background="?attr/view_color" />
 
@@ -146,7 +193,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/poppins_light"
-                android:text="Summary"
+                tools:text="Summary"
                 android:textColor="?attr/text_color"
                 android:textSize="15sp" />
 

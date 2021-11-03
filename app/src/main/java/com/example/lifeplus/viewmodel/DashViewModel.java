@@ -6,7 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.lifeplus.reponse.shows.ShowsResponse;
+import com.example.lifeplus.reponse.shows.search.SearchResponse;
+import com.example.lifeplus.reponse.shows.single.ShowsResponse;
 import com.example.lifeplus.repository.ApiRepository;
 import com.example.lifeplus.restAPI.APIClient;
 import com.example.lifeplus.restAPI.ApiInterface;
@@ -24,7 +25,11 @@ public class DashViewModel extends AndroidViewModel {
         apiRepository=new ApiRepository(apiInterface);
     }
 
-    public MutableLiveData<List<ShowsResponse>> getAllShow(int page){
-        return apiRepository.getAllShow(page);
+    public MutableLiveData<List<SearchResponse>> getAllShow(String s){
+        return apiRepository.getAllShow(s);
+    }
+
+    public MutableLiveData<ShowsResponse>getShowById(String id){
+        return apiRepository.getshowById(id);
     }
 }

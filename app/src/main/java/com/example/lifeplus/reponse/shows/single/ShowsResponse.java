@@ -1,5 +1,5 @@
 
-package com.example.lifeplus.reponse.shows;
+package com.example.lifeplus.reponse.shows.single;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

@@ -1,5 +1,6 @@
 
-package com.example.lifeplus.reponse.shows;
+package com.example.lifeplus.reponse.shows.single;
+
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

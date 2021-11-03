@@ -1,6 +1,7 @@
 package com.example.lifeplus.restAPI;
 
-import com.example.lifeplus.reponse.shows.ShowsResponse;
+import com.example.lifeplus.reponse.shows.search.SearchResponse;
+import com.example.lifeplus.reponse.shows.single.ShowsResponse;
 
 import java.util.List;
 
@@ -11,9 +12,9 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
 
-    @GET("shows")
-    Call<List<ShowsResponse>> getAllShows(
-            @Query("page") int page
+    @GET("search/shows")
+    Call<List<SearchResponse>> getAllShows(
+            @Query("q") String str
     );
 
     @GET("shows/{id}")

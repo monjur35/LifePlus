@@ -1,12 +1,12 @@
 
-package com.example.lifeplus.reponse.shows;
+package com.example.lifeplus.reponse.shows.search;
 
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class Previousepisode {
+public class Self {
 
     @SerializedName("href")
     @Expose
