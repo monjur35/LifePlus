@@ -1,10 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.DetailsFragment">
 
 
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/imagePoster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/eeeeee">
+
+                <ImageView
+                    android:id="@+id/imageinRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/unsplash" />
+
+                <ImageView
+                    android:id="@+id/gd"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/gradient" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/namelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eeeeee"
+                >
+
+                <TextView
+                    android:id="@+id/movieNameinRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Under the dome"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/yearinRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/movieNameinRow"
+                    android:fontFamily="@font/poppins"
+                    android:text="(2021)"
+                    android:textColor="?attr/text_color"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namelayout"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="Imdb :7/10"
+                android:textColor="?attr/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namelayout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="Duration :60 mins"
+                android:textColor="?attr/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/gnre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="Genres: Thriller"
+                android:textColor="?attr/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gnre"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="US"
+                android:textColor="?attr/text_color"
+                android:textSize="15sp" />
+
+
+            <View
+                android:id="@+id/empView"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/country"
+                android:layout_marginTop="10dp"
+                android:background="?attr/view_color" />
+
+            <TextView
+                android:id="@+id/summ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/empView"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Summary"
+                android:textColor="?attr/text_color"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/summaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/summ"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Summary"
+                android:textColor="?attr/text_color"
+                android:textSize="15sp" />
+
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.FadingCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:SpinKit_Color="#DC00796B" />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
