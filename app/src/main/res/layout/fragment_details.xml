@@ -90,7 +90,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginHorizontal="10dp"
                 android:fontFamily="@font/poppins"
-                android:text="Duration :60 mins"
+                tools:text="Duration :60 mins"
                 android:textColor="?attr/text_color"
                 android:textSize="15sp" />
 

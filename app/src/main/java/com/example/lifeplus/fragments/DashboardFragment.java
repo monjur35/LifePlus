@@ -25,6 +25,7 @@ import com.example.lifeplus.adapter.MovieAdapter;
 import com.example.lifeplus.databinding.FragmentDashboardBinding;
 import com.example.lifeplus.reponse.shows.search.SearchResponse;
 import com.example.lifeplus.reponse.shows.single.ShowsResponse;
+import com.example.lifeplus.utils.StoreDataPreference;
 import com.example.lifeplus.viewmodel.DashViewModel;
 
 import java.util.ArrayList;
@@ -39,6 +40,9 @@ public class DashboardFragment extends Fragment {
     private List<SearchResponse>showsList;
     private MovieAdapter adapter;
     private LinearLayoutManager linearLayoutManager;
+    private StoreDataPreference storeDataPreference;
+
+    String search;
 
 
     public DashboardFragment() {
@@ -51,6 +55,7 @@ public class DashboardFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding=FragmentDashboardBinding.inflate(inflater);
         dashViewModel=new ViewModelProvider(requireActivity()).get(DashViewModel.class);
+        storeDataPreference=StoreDataPreference.getInstance(requireContext());
 
         showsList=new ArrayList<>();
 
@@ -65,12 +70,16 @@ public class DashboardFragment extends Fragment {
         Handler handler=new Handler(Looper.getMainLooper());
 
 
+        search =storeDataPreference.getKeySearch();
+        callForShows(search);
+
 
         binding.searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 String s=binding.searchBox.getText().toString();
+                storeDataPreference.setSearchKey(s);
                 if (!s.isEmpty()){
                     binding.spinKit.setVisibility(View.VISIBLE);
                     hideKeyBoard(view);
@@ -83,6 +92,7 @@ public class DashboardFragment extends Fragment {
                     });
                 }
                 else {
+                    callForShows(search);
                     Toast.makeText(requireActivity(), "Input something first", Toast.LENGTH_SHORT).show();
                 }
             }

@@ -59,14 +59,25 @@ public class DetailsFragment extends Fragment {
                     @Override
                     public void onChanged(ShowsResponse showsResponse) {
                         if (showsResponse!=null){
-                            Picasso.get().load(showsResponse.getImage().getOriginal()).into(binding.imageinRow);
+
+                            if (showsResponse.getImage()!=null){
+                                Picasso.get().load(showsResponse.getImage().getOriginal()).into(binding.imageinRow);
+                            }
+
                             binding.movieNameinRow.setText(showsResponse.getName());
                             binding.yearinRow.setText("("+showsResponse.getPremiered()+")");
                             binding.rating.setText("Imdb : "+showsResponse.getRating().getAverage()+"/10");
                             String genre= Arrays.toString(showsResponse.getGenres().toArray());
                             binding.gnre.setText(genre);
-                            binding.duration.setText("Duration : "+showsResponse.getRuntime().toString()+" mins");
-                            binding.country.setText(showsResponse.getNetwork().getCountry().getName());
+                            if (showsResponse.getRuntime()!=null){
+                                binding.duration.setText("Duration : "+showsResponse.getRuntime().toString()+" mins");
+                            }
+
+
+                            if(showsResponse.getNetwork()!=null){
+                                binding.country.setText(showsResponse.getNetwork().getCountry().getName());
+                            }
+
                             binding.summaryText.setText(showsResponse.getSummary());
                             binding.time.setText(showsResponse.getSchedule().getTime());
                             String days=Arrays.toString(showsResponse.getSchedule().getDays().toArray());

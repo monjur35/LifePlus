@@ -14,6 +14,7 @@ public class StoreDataPreference {
     private static final String PREF_NAME = "LifePlus";
     private static  final String IS_LOGIN = "IsLoggedIn";
     public static final String KEY_USER_NAME = "userName";
+    public static final String KEY_SEARCH = "searchKeyWord";
 
 
     public StoreDataPreference(Context context) {
@@ -34,6 +35,11 @@ public class StoreDataPreference {
         editor.apply();
 
     }
+    public void setSearchKey(String searchKey){
+        editor=pref.edit();
+        editor.putString(KEY_SEARCH,searchKey);
+        editor.apply();
+    }
 
     public void setUserName(String userName){
         editor=pref.edit();
@@ -48,6 +54,9 @@ public class StoreDataPreference {
 
     public  String getKeyUserName() {
         return storeDataPreference.pref.getString(KEY_USER_NAME,"");
+    }
+    public  String getKeySearch() {
+        return storeDataPreference.pref.getString(KEY_SEARCH,"");
     }
 
 
